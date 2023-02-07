@@ -33,6 +33,7 @@ En este se almacena el csv resultado.
   *  ***EventBridge***
 Con este creamos un "gatillo" que dispara la funcion Lambda una vez por dia.
 
+[liberias](Librerias)
   *  ***IAM***
 En el creamos los permisos necesarios para que la funcion lambda acceda al Bucket S3 para leer y escribir archivos. 
 
