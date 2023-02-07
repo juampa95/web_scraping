@@ -1,5 +1,6 @@
 <div align="center">
- <h1>web_scraping</h1>
+ <h1>Web Scraping</h1>
+ <i> Python + AWS </i>
 </div>
 
 <div align="center">
