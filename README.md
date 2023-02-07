@@ -23,14 +23,19 @@ en donde toda iteraccion se hace a traves de ventanas emergentes o listas desple
 
 Esto se dividio en varias partes y decidi implementarlo en AWS con la ayuda de las funciones Lambda y el almacenamiento
 en Buckets S3. 
+
 	 *  ***Funciones Lambda***
 Con esto podemos ejecutar scripts de python en AWS.
+
 	*	***Buckets S3***
 En este se almacena el csv resultado.
+
 	*	***EventBridge***
 Con este creamos un "gatillo" que dispara la funcion Lambda una vez por dia.
+
 	*	***IAM***
 En el creamos los permisos necesarios para que la funcion lambda acceda al Bucket S3 para leer y escribir archivos. 
+
 
 Al no contar con experiencia suficiente para lograr que todo esto funcione, busque en google para llegar al resultado final. Por ello llegue al post  de Medium de [Vinod Dhole](https://blog.jovian.com/automate-web-scraping-using-python-aws-lambda-amazon-s3-amazon-eventbridge-cloudwatch-c4c982c35fa9)
 
