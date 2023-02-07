@@ -2,7 +2,7 @@
 
 ## Table of Contents
 1. [Información General](#Información-General)
-2. [Tecnologia](#technologies)
+2. [Tecnologia](#Tecnología)
 3. [Installation](#installation)
 4. [Collaboration](#collaboration)
 5. [FAQs](#faqs)
@@ -39,7 +39,7 @@ En el creamos los permisos necesarios para que la funcion lambda acceda al Bucke
 
 Al no contar con experiencia suficiente para lograr que todo esto funcione, busque en google para llegar al resultado final. Por ello llegue al post  de Medium de [Vinod Dhole](https://blog.jovian.com/automate-web-scraping-using-python-aws-lambda-amazon-s3-amazon-eventbridge-cloudwatch-c4c982c35fa9)
 
-## Tecnologia
+## Tecnología
 Todos estas librerias deben ser compatibles para la misma version de Python. En este caso se realizo en la version 3.7
 
 Pueden descargarlas desde PYPI o desde este [enlace](Librerias)
