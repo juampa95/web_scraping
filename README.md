@@ -1,20 +1,40 @@
 # web_scraping
 
 ## Table of Contents
-1. [General Info](#general-info)
+1. [Información General](#general-info)
 2. [Technologies](#technologies)
 3. [Installation](#installation)
 4. [Collaboration](#collaboration)
 5. [FAQs](#faqs)
-### General Info
+### Información General
 ***
-Write down the general informations of your project. It is worth to always put a project status in the Readme file. This is where you can add it. 
+Este proyecto comenzo por curiosidad. La idea era lograr armar una base de datos de información en tiempo real, que luego 
+seria usada en algun modelo de inteligencia artificial para lograr predecir el precio de un item. 
+En este caso, esos precios son obtenidos de la pagina web de diferentes sucursales de La Anonima. 
+[Supermercado La Anonima] https://supermercado.laanonimaonline.com/
+
+Para que esto funcione fue necesario seguir los siguientes pasos:
+*[Crear Web Scraper]
+Esto lo hice con Selenium ya que me ofrecia una gran versatilidad para navegar por paginas como las de un supermercado
+en donde toda iteraccion se hace a traves de ventanas emergentes o listas desplegables.
+*[Automatizar el proceso]
+Esto se dividio en varias partes y decidi implementarlo en AWS con la ayuda de las funciones Lambda y el almacenamiento
+en Buckets S3. 
+**[Funciones Lambda]
+Con esto podemos ejecutar scripts de python en AWS.
+**[Buckets S3]
+En este se almacena el csv resultado.
+**[EventBridge]
+Con este creamos un "gatillo" que dispara la funcion Lambda una vez por dia.
+**[IAM]
+En el creamos los permisos necesarios para que la funcion lambda acceda al Bucket S3 para leer y escribir archivos. 
+
 ### Screenshot
 ![Image text](https://www.united-internet.de/fileadmin/user_upload/Brands/Downloads/Logo_IONOS_by.jpg)
 ## Technologies
 ***
-A list of technologies used within the project:
-* [Technologie name](https://example.com): Version 12.3 
+Lista de tecnologias usadas en el proyecto:
+* [Python: Pandas ](https://example.com): Version 12.3 
 * [Technologie name](https://example.com): Version 2.34
 * [Library name](https://example.com): Version 1234
 ## Installation
