@@ -24,16 +24,16 @@ en donde toda iteraccion se hace a traves de ventanas emergentes o listas desple
 Esto se dividio en varias partes y decidi implementarlo en AWS con la ayuda de las funciones Lambda y el almacenamiento
 en Buckets S3. 
 
-  * ***Funciones Lambda***
+  * 	***Funciones Lambda***
 Con esto podemos ejecutar scripts de python en AWS.
 
-  * ***Buckets S3***
+  * 	***Buckets S3***
 En este se almacena el csv resultado.
 
-  * ***EventBridge***
+  * 	***EventBridge***
 Con este creamos un "gatillo" que dispara la funcion Lambda una vez por dia.
 
-  * ***IAM***
+  * 	***IAM***
 En el creamos los permisos necesarios para que la funcion lambda acceda al Bucket S3 para leer y escribir archivos. 
 
 
