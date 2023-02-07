@@ -16,9 +16,11 @@ En este caso, esos precios son obtenidos de la pagina web de diferentes sucursal
 
 Para que esto funcione fue necesario seguir los siguientes pasos:
  * **Crear Web Scraper**
+
 Esto lo hice con Selenium ya que me ofrecia una gran versatilidad para navegar por paginas como las de un supermercado
 en donde toda iteraccion se hace a traves de ventanas emergentes o listas desplegables.
  * **Automatizar el proceso**
+
 Esto se dividio en varias partes y decidi implementarlo en AWS con la ayuda de las funciones Lambda y el almacenamiento
 en Buckets S3. 
 	 *  ***Funciones Lambda***
