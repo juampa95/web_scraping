@@ -1,13 +1,22 @@
-# web_scraping
+<div align="center">
+ <h1>web_scraping</h1>
+</div>
 
-## Table of Contents
-1. [Información General](#Información-General)
-2. [Tecnologia](#Tecnología)
-3. [Installation](#installation)
-4. [Collaboration](#collaboration)
-5. [FAQs](#faqs)
+<div align="center">
+ <img alt ="estado-en-progreso" src = https://img.shields.io/badge/estado-en%20progreso-green/>
+ <img alt ="version-python" src =https://img.shields.io/badge/Python-3.7-blue/>
+</div>
+
+
+## Tabla de contenido
+
+[Información General](Información-General)
+
+[Tecnologia](Tecnología)
+
+
 ### Información General
-***
+
 Este proyecto comenzo por curiosidad. La idea era lograr armar una base de datos de información en tiempo real, que luego 
 seria usada en algun modelo de inteligencia artificial para lograr predecir el precio de un item. 
 En este caso, esos precios son obtenidos de la pagina web de diferentes sucursales de La Anonima.
