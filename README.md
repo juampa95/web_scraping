@@ -33,7 +33,6 @@ En este se almacena el csv resultado.
   *  ***EventBridge***
 Con este creamos un "gatillo" que dispara la funcion Lambda una vez por dia.
 
-[liberias](Librerias)
   *  ***IAM***
 En el creamos los permisos necesarios para que la funcion lambda acceda al Bucket S3 para leer y escribir archivos. 
 
@@ -42,6 +41,8 @@ Al no contar con experiencia suficiente para lograr que todo esto funcione, busq
 
 ## Tecnologia
 Todos estas librerias deben ser compatibles para la misma version de Python. En este caso se realizo en la version 3.7
+
+Pueden descargarlas desde PYPI o desde este [enlace](Librerias)
 | Tecnologia     |Versión                         |Link                         |
 |----------------|-------------------------------|-----------------------------|
 |Pandas          |1.3.5                          |https://pypi.org/project/pandas/1.3.5/            |
