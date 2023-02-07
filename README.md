@@ -10,9 +10,9 @@
 
 ## Tabla de contenido
 
-[Información General](Información-General)
+[Información General](#Información-General)
 
-[Tecnologia](Tecnología)
+[Tecnologia](#Tecnología)
 
 
 ### Información General
