@@ -1,7 +1,7 @@
 # web_scraping
 
 ## Table of Contents
-1. [Información General](#Información General)
+1. [Información General](#Información-General)
 2. [Tecnologia](#technologies)
 3. [Installation](#installation)
 4. [Collaboration](#collaboration)
