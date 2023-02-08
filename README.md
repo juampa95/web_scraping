@@ -60,6 +60,69 @@ En el creamos los permisos necesarios para que la funcion lambda acceda al Bucke
 
 Al no contar con experiencia suficiente para lograr que todo esto funcione, busque en google para llegar al resultado final. Por ello llegue al post  de Medium de [Vinod Dhole](https://blog.jovian.com/automate-web-scraping-using-python-aws-lambda-amazon-s3-amazon-eventbridge-cloudwatch-c4c982c35fa9)
 
+## Pasos a seguir 
+
+Inicialmente debemos ingresar a la pagina e identificar que queremos realizar. En mi caso, era obtener el preecio de un unico articulo para cada una de las sucursales que posee esta cadena de supermercados dentro del pais.
+
+Por ello realizo todos los pasos de forma manual para entender un poco que es lo que deberia ir haciendo el web scraper. 
+
+1. Presionamos el boton para seleccionar sucursales, a la derecha del buscador. 
+
+![Barra_buscador](https://user-images.githubusercontent.com/42218625/217662423-8e3c861c-3fa6-4092-91dc-916334a0777f.png)
+> Nota: Esto hace que aparezca una ventana emergente
+
+2. Seleccionamos la provincia y la sucursal
+<div align="center">
+ <img src="https://user-images.githubusercontent.com/42218625/217663562-66d114ed-81fe-433f-b99d-4b6bc6510668.png" width="300" height="280"/>
+</div>
+
+3. Presionamos Aceptar y luego de que la pagina cambie de sucursal ingresamos en la barra de busqueda el item que deseemos.
+
+Este proyecto no tiene una finalidad especifica por lo que se seleccionó cualquier item. Algo que todos conocemos es una CocaCola y la que mas podemos encontrarnos en el dia a dia es la de 2.25L regular. Ingresamos el nombre y seleccionamos el producto. 
+
+<div align="center">
+ <img src="https://user-images.githubusercontent.com/42218625/217664785-bbaa5d83-ccdc-4503-ae2b-8b3710e5b182.png" width="650" height="280"/>
+</div>
+
+> Tip: En lugar de buscar por el nombre de un producto, es preferible hacerlo por su SKU, en este caso el mismo es `0228801` que se ve a la derecha de la imagen
+
+4. Identificamos el dato que queremos extraer. En este caso el precio del producto. 
+5. Una vez que ya conocemos todos los pasos podemos comenzar a codear el web scraper. Para ello no voy a entrar en muchos detalles ya que el codigo compleeto pueden enconrtarlo con todos los comentarios necesarios aca [`ACA`](web_scraper_object_git.py)
+
+Si no es de su agrado ver codigo con tantos comentarios hay una version "limpia" en este otro [`LINK`](web_scraper_object_raw.py)
+
+Una breve explicacion de que fue lo que se hizo en el codigo:
+
+1. Creamos una instancia del WebDriver de Chrome 
+    ```python
+    class WebDriver(object):
+    ```
+2. Creamos una funcion que va a obtener todas las provincias y localidades que posee la cadena de supermercados 
+    ```python
+    def get_prov(driver):
+    ...
+    ...
+    return(prov_loc)
+    ```
+3. Usamos ese parametro de entrada de una nueva funcion para obtener los precios del producto deseado en cada una de las localidades
+    ```python
+    def get_precios(driver,prov_loc):
+    ...
+    ...
+    return(df)
+    ```
+4. Una ves que tengamos los precios y las localidades solo queda subirlo al bucket S3 que se designo para eso
+    ```python
+    def up_csv_s3(df):
+    ```
+    > Importante: Para configurar el bucket S3 vean el post que sugiero mas arriba. 
+5. Por ultimo creamos el `lambda_handler` necesario para ejecutar la funcion en Lamnda de AWS. 
+    ```python
+    def lambda_handler(event,context):
+    ```
+6. Una vez que todo esto esta configurado de manera correcta, llega el momento de entrar en AWS para configurar la funcion Lambda y el gatillo que la disparara con EventBridge. Para ver un tutorial detallado de como hacerlo pueden ingresar [`AQUI`](https://blog.jovian.com/automate-web-scraping-using-python-aws-lambda-amazon-s3-amazon-eventbridge-cloudwatch-c4c982c35fa9)
+
+
 ## Tecnología
 Todos estas librerias deben ser compatibles para la misma version de Python. En este caso se realizo en la version 3.7
 
