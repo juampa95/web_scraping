@@ -15,6 +15,7 @@
 
 [Tecnologia](#Tecnología)
 
+[Resultado](#Resultado)
 
 ### Información General
 
@@ -69,3 +70,23 @@ Pueden descargarlas desde PYPI o desde este [enlace](Librerias)
 |Numpy           |1.19.0                         |https://pypi.org/project/numpy/1.19.0/            |
 |Pytz            |2021.1                         |https://pypi.org/project/pytz/2021.1/|
 |Selenium        |3.141.0                          |https://pypi.org/project/selenium/3.141.0/       |
+
+## Resultado
+
+Haciendo click en este [`LINK`](https://webscraperjp.s3.sa-east-1.amazonaws.com/asd.csv) podra descargar el archivo CSV que contiene los datos que el web scraper recolecta diariamente. 
+
+> Nota: si descarga el archivo, notara que en algunos se recopilo informacion mas de una vez por dia. Esto se debe a que fue necesario ralizar algunos test del script en AWS, lo que genero que se cargara informacion durante el test y durante la ejecucion normal del dia. 
+
+Si bien el archivo se encuentra en CSV. En su formato tabular se veria algo como lo siguiente:
+
+| Fecha     | Hora      | Provincia     | Localidad   | Precio     | 
+|------------|-----------|--------------|-------------|-----------|
+|12/01/2023  | 23:50:45  | BUENOS AIRES  | 9 DE JULIO  | $ 382,50  |
+|12/01/2023  | 23:50:49  | BUENOS AIRES  | AZUL  | $ 390,00  |
+|12/01/2023  | 23:50:52  | BUENOS AIRES  | BRAGADO  | $ 390,00  |
+|......  | ...... | ...... | ......  | $ ...... |
+|12/01/2023  | 23:53:39  | TIERRA DEL FUEGO  | USHUAIA  | $ 409,00  |
+
+
+
+
