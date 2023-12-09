@@ -155,6 +155,8 @@ Si bien el archivo se encuentra en CSV. En su formato tabular se veria algo como
 
 En Dicembre del 2023 finaliza el uso de mi capa gratiuita de AWS, por lo que voy a dar de baja el servicio y el webscraper. El reopsitorio quedara activo, pero es muy probable que no pueda accederse a gran parte de los recursos ofrecidos. 
 
+Se puede descargar el archivo CSV final desde este repositorio, ya que el almacenado en S3 fue eliminado. [DATOS](resultados09122023.csv)
+
 
 
 
