@@ -151,5 +151,11 @@ Si bien el archivo se encuentra en CSV. En su formato tabular se veria algo como
 |12/01/2023  | 23:53:39  | TIERRA DEL FUEGO  | USHUAIA  | $ 409,00  |
 
 
+## Finalizacion del proyecto 12/2023
+
+En Dicembre del 2023 finaliza el uso de mi capa gratiuita de AWS, por lo que voy a dar de baja el servicio y el webscraper. El reopsitorio quedara activo, pero es muy probable que no pueda accederse a gran parte de los recursos ofrecidos. 
+
+
+
 
 
